@@ -1,15 +1,26 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {CustomSelect} from './modules/form-validate/custom-select';
+import {burgerMenuInit} from './modules/burger';
+import {initAccordions} from './modules/accordion/init-accordion';
+import {heroSwiper} from './modules/hero';
+import {initProgramsSwiper, initNewsSwiper, initReviewsSwiper} from './modules/slider';
+import {initNewsBtn} from './modules/news';
+import {initContactsMap} from './modules/map';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
-  // Utils
-  // ---------------------------------
-
   iosVhFix();
+  burgerMenuInit();
+  initAccordions();
+  heroSwiper();
+  initProgramsSwiper();
+  initNewsSwiper();
+  initNewsBtn();
+  initReviewsSwiper();
+  initContactsMap();
 
   // Modules
   // ---------------------------------
@@ -21,6 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    const select = new CustomSelect();
+    select.init();
   });
 });
 

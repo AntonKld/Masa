@@ -67,7 +67,7 @@
     padding: 5px 10px;
 
     background-color: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     outline: none;
     cursor: pointer;
@@ -75,11 +75,11 @@
     transition: border 0.3s ease;
 
     &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
+      border: 1px solid $color-charcoal;
     }
 
     &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
     }
 
     &:disabled {
@@ -107,7 +107,7 @@
     visibility: hidden;
     opacity: 0;
 
-    transition: visibility 0.3s ease, opacity 0.3s ease;
+    transition: visibility 0.1s ease, opacity 0.1s ease;
   }
 
   &__item {
@@ -119,7 +119,8 @@
     transition: background-color 0.3s ease;
 
     &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
+      color: $color-default-white;
+      background-color: $color-cerulean-blue;
 
       @media (hover: hover) {
         &:hover:not(.focus-visible) {
@@ -177,11 +178,11 @@
 
   &__icon {
     flex-shrink: 0;
-    width: 20px;
-    height: 10px;
+    width: 14px;
+    height: 9px;
     margin-left: auto;
 
-    background-color: #000000;
+    background-color: $color-charcoal;
 
     transition: transform 0.3s ease;
 
@@ -239,7 +240,9 @@
     }
 
     .custom-select__button {
-      border: 2px solid #ff1553;
+      border: 1px solid $color-wild-watermelon;
+      background: rgba(255, 94, 102, 0.2);
+      border-radius: 8px;
 
       &:focus,
       &:hover {

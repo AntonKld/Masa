@@ -2,7 +2,10 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-// Swiper 7.4.1
+@import "vendor/data-accordion.scss";
+@import "vendor/swiper.scss";
+@import "vendor/leaflet.scss";
+@import "vendor/auto-resize-textarea";
 // @import "vendor/swiper";
 
 // Global
@@ -23,6 +26,21 @@
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/footer.scss";
+@import "blocks/hero.scss";
+@import "blocks/project.scss";
+@import "blocks/advantages.scss";
+@import "blocks/states-button.scss";
+@import "blocks/form.scss";
+@import "blocks/programs.scss";
+@import "blocks/details.scss";
+@import "blocks/news.scss";
+@import "blocks/faq.scss";
+@import "blocks/reviews.scss";
+@import "blocks/contacts.scss";
+@import "blocks/feedback.scss";
 
 // ---------------------------------
 

@@ -1,0 +1,466 @@
+.hero__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.hero__item {
+  display: flex;
+}
+
+.hero__content {
+  padding: 420px 5px 59px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+
+  @include vp-1199 {
+    padding: 695px 45px 59px;
+  }
+
+  @include vp-767 {
+    padding: 260px 15px 20px;
+  }
+}
+
+.hero__pagination {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  max-width: 94px;
+  padding: 14px 16px;
+  background-color: $color-default-white;
+  border-radius: 20px 20px 0 0;
+  justify-content: space-between;
+
+  &::after {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    content: "";
+    top: 13px;
+    right: -25px;
+    background-image: url("../img/svg/angle.svg");
+    transform: rotate(-90deg);
+  }
+
+  @include vp-1199 {
+    padding: 13px 16px 16px;
+
+    &::after {
+      top: 13px;
+    }
+  }
+
+  @include vp-767 {
+    max-width: 80px;
+    padding: 9px 12px;
+    border-radius: 12px 12px 0 0;
+
+    &::after {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      content: "";
+      top: 19px;
+      right: -10px;
+      background-image: url("../img/svg/angle2.svg");
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+  border: 1px solid $color-cerulean-blue;
+  margin: 0;
+  opacity: 1;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-cerulean-blue;
+    background-color: transparent;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: $color-cerulean-blue;
+  border-color: $color-cerulean-blue;
+}
+
+.hero__content h2 {
+  max-width: calc(78% + 1px);
+  margin: 0;
+  padding: 40px 50px 29px;
+  font-size: 54px;
+  line-height: 62px;
+  font-weight: 400;
+  color: $color-cerulean-blue;
+  background-color: $color-default-white;
+  border-radius: 0 30px 30px 0;
+
+  @include vp-1199 {
+    max-width: calc(97% + 1px);
+    margin: 0;
+    padding: 31px 40px 23px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 14px 16px;
+    font-size: 22px;
+    line-height: 26px;
+    border-radius: 0 16px 16px 0;
+  }
+}
+
+.hero__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: -7px 468px 0 0;
+  padding: 7px 50px 37px;
+  background-color: $color-default-white;
+  border-radius: 0 0 30px 30px;
+  gap: 0 30px;
+
+  &::after {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    content: "";
+    top: 6px;
+    right: -26px;
+    background-image: url("../img/svg/angle.svg");
+  }
+
+  @include vp-1199 {
+    margin: -4px 87px 0 0;
+    padding: 0 40px 32px;
+    align-items: flex-start;
+
+    &::after {
+      top: 4px;
+    }
+  }
+
+  @include vp-767 {
+    max-width: 90%;
+    flex-direction: column;
+    margin: -5px 0 0;
+    padding: 0;
+    background-color: transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.hero__button {
+  @include vp-767 {
+    margin-top: -1px;
+    padding: 10px 15px;
+    position: relative;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 14px;
+
+    &::before {
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      content: "";
+      top: 0;
+      right: -25px;
+      background-image: url("../img/svg/angle.svg");
+    }
+  }
+
+  @include vp-767 {
+    position: relative;
+    margin: 0;
+    padding: 10px 15px;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 14px;
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      content: "";
+      top: 0;
+      right: -10px;
+      background-image: url("../img/svg/angle2.svg");
+    }
+  }
+}
+
+.hero__link-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.28px;
+  flex-wrap: wrap;
+  gap: 19px;
+  border-radius: 30px;
+  border: 1px solid $color-cerulean-blue;
+  padding: 6px 79px 5px 29px;
+  z-index: 4;
+  height: 54px;
+  background-color: $color-default-white;
+  color: $color-cerulean-blue;
+  user-select: none;
+
+  @include vp-767 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+    height: 42px;
+    padding: 6px 57px 5px 19px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    width: 46px;
+    height: 46px;
+    background-color: $color-cerulean-blue;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background-color $trans-default;
+
+    @include vp-767 {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 21px;
+    bottom: 0;
+    left: auto;
+    margin: auto 0;
+    color: $color-default-white;
+    transition:
+      color $trans-default,
+      transform $trans-default;
+    stroke-width: 1px;
+  }
+
+  &:hover {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:focus {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    background-color: $color-cerulean-blue;
+    color: rgba($color-default-white, 0.7);
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  @include disabled {
+    pointer-events: none;
+    border-color: $color-mischka;
+    color: $color-mischka;
+
+    &::before {
+      background-color: $color-mischka;
+    }
+  }
+}
+
+.hero__container p {
+  width: 446px;
+  margin: 0;
+
+  @include vp-1199 {
+    width: 100%;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    padding: 0 14px 10px;
+    font-size: 14px;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 0;
+
+    &::after {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      content: "";
+      top: 5px;
+      right: -9px;
+      background-image: url("../img/svg/angle2.svg");
+    }
+  }
+}
+
+.hero__container a {
+  align-self: center;
+  margin: -1px 0 0;
+
+  &::after {
+    width: 46px;
+    height: 46px;
+  }
+
+  & svg {
+    width: 10px;
+    height: 10px;
+    right: 21px;
+
+    @include vp-1199 {
+      right: 16px;
+    }
+  }
+
+  @include vp-1199 {
+    align-self: flex-start;
+    margin: 2px 0 0;
+
+    & svg {
+      right: 21px;
+    }
+  }
+
+  @include vp-767 {
+    position: relative;
+    margin: 0;
+    background-color: $color-default-white;
+
+    &::after {
+      width: 34px;
+      height: 34px;
+    }
+
+    & svg {
+      width: 8px;
+      height: 8px;
+      right: 16px;
+    }
+  }
+}
+
+.hero__item picture {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 109, 194, 0.2);
+    inset: 0;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    background-color: $color-cerulean-blue;
+  }
+}
+
+.hero__item--slide .hero__content {
+  padding: 408px 5px 58px;
+
+  @include vp-1199 {
+    padding: 676px 45px 59px;
+  }
+
+  @include vp-767 {
+    padding: 234px 15px 20px;
+  }
+}
+
+.hero__item--slide .hero__container {
+  padding: 4px 50px 33px;
+
+  @include vp-1199 {
+    padding: 0 40px 32px;
+  }
+
+  @include vp-767 {
+    max-width: 90%;
+    flex-direction: column;
+    margin: -5px 0 0;
+    padding: 0;
+    background-color: transparent;
+  }
+}

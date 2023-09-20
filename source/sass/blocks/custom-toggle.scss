@@ -47,13 +47,7 @@
   &--checkbox {
     .custom-toggle__icon {
       position: absolute;
-      top: 0;
       left: 0;
-
-      width: 28px;
-      height: 28px;
-
-      border: 1.5px solid #2c39f2;
 
       transition: border 0.3s ease;
 
@@ -109,17 +103,9 @@
   }
 
   input:checked + .custom-toggle__icon {
-    border: 1.5px solid #2c39f2;
-
-    &::before {
-      background-color: #2c39f2;
-    }
-  }
-
-  &.is-invalid {
-    label span {
-      color: #ff1553;
-    }
+    border: 1px solid #316dc2;
+    background-color: #316dc2;
+    border-radius: 2px;
   }
 
   .input-message {
@@ -129,10 +115,6 @@
 
     &.is-invalid {
       color: #ff0000;
-    }
-
-    &.is-valid {
-      color: #15ab07;
     }
   }
 }
