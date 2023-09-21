@@ -21,6 +21,7 @@
   row-gap: 54px;
   column-gap: 53px;
   padding: 0;
+  position: relative;
 
   @include vp-1199 {
     column-gap: 50px;
@@ -51,17 +52,18 @@
   }
 }
 
-.advantages__wrapper {
+.advantages__item::before {
   position: absolute;
   content: "";
   width: 42px;
   height: 42px;
-  top: -23px;
+  background-image: url("../img/svg/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #316dc2;
+  background-size: 21px 22px;
+  top: -24px;
   left: -21px;
-  background-color: $color-cerulean-blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .advantages__text {

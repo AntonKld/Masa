@@ -6,10 +6,7 @@ const initContactsMap = () => {
 
     const coordinate = [55.028527396640804, 82.92824989073691];
     const url = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    const markerText = `
-<p>г. Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
-<p>Номер телефона: <a href="tel:+796387687676">+7 963 876 876 76</a></p>
-`;
+    const markerText = document.querySelector('.contacts__item p').innerHTML;
 
     const map = createMap('map', {
       center: coordinate,

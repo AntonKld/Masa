@@ -100,7 +100,7 @@
   }
 }
 
-.details__list {
+.details__text ul {
   display: flex;
   flex-direction: column;
   counter-reset: details__item;
@@ -108,6 +108,68 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  & .details__item--block {
+    padding: 22px 65px 23px 24px;
+
+    @include vp-1199 {
+      line-height: 20px;
+      padding: 25px 35px 25px 24px;
+    }
+
+    @include vp-767 {
+      padding: 18px 35px 18px 24px;
+    }
+  }
+
+
+  & li {
+    position: relative;
+    margin-left: 20px;
+    padding: 22px 65px 21px 24px;
+    border: 1px solid $color-alabaster;
+    border-radius: 16px;
+    line-height: 26px;
+
+    &::before {
+      content: counter(details__item);
+      counter-increment: details__item;
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      top: -16px;
+      left: -22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.22px;
+      background-color: $color-cerulean-blue;
+
+      @include vp-767 {
+        top: -6px;
+        left: -13px;
+        width: 26px;
+        height: 32px;
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+
+    @include vp-1199 {
+      line-height: 20px;
+      padding: 25px 35px 25px 24px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      margin-left: 15px;
+      padding: 18px 35px 18px 24px;
+    }
+  }
 
   @include vp-1199 {
     display: grid;
@@ -119,66 +181,5 @@
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-  }
-}
-
-.details__list li {
-  position: relative;
-  margin-left: 20px;
-  padding: 22px 65px 21px 24px;
-  border: 1px solid $color-alabaster;
-  border-radius: 16px;
-  line-height: 26px;
-
-  @include vp-1199 {
-    line-height: 20px;
-    padding: 25px 35px 25px 24px;
-  }
-
-  @include vp-767 {
-    font-size: 14px;
-    margin-left: 15px;
-    padding: 18px 35px 18px 24px;
-  }
-}
-
-.details__list li::before {
-  content: counter(details__item);
-  counter-increment: details__item;
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  top: -16px;
-  left: -22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 22px;
-  text-transform: uppercase;
-  letter-spacing: 0.22px;
-  background-color: $color-cerulean-blue;
-
-  @include vp-767 {
-    top: -6px;
-    left: -13px;
-    width: 26px;
-    height: 32px;
-    font-size: 18px;
-    line-height: 18px;
-  }
-}
-
-.details__list .details__item--block {
-  padding: 22px 65px 23px 24px;
-
-  @include vp-1199 {
-    line-height: 20px;
-    padding: 25px 35px 25px 24px;
-  }
-
-  @include vp-767 {
-    padding: 18px 35px 18px 24px;
   }
 }
