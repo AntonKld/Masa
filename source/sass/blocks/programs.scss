@@ -55,6 +55,8 @@
   width: 232px;
   padding: 3px 3px 2px 30px;
   margin-top: -5px;
+  display: flex;
+  align-items: center;
 
   @include vp-1199 {
     margin: 0;
@@ -132,10 +134,12 @@
 
   @include vp-1199 {
     padding: 285px 41px 20px 20px;
+    min-height: 54.68vw;
   }
 
   @include vp-767 {
-    padding: 270px 10px 18px 10px;
+    padding: 271px 10px 18px;
+    min-height: 125vw;
   }
 }
 
@@ -284,6 +288,7 @@
 }
 
 .programs__swiper-button {
+  background-color: transparent;
   position: relative;
   left: unset;
   right: unset;

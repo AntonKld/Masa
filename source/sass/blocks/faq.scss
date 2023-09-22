@@ -74,6 +74,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: transparent;
   width: 100%;
   border-radius: 16px;
   border: 0;
@@ -223,6 +224,15 @@
 
   &::before {
     background-color: $color-endeavour;
+  }
+}
+
+.faq__item.is-active .faq__button:hover .faq__button-icon {
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-default-white;
+
+  &::before {
+    background-color: $color-default-white;
   }
 }
 

@@ -5,9 +5,11 @@ export const heroSwiper = () => {
     watchSlidesProgress: true,
     slideVisibleClass: 'hero__slide--visible',
     loading: 'lazy',
+
     autoplay: {
       delay: 3000,
     },
+
     effect: 'fade',
     fadeEffect: {
       crossFade: true,

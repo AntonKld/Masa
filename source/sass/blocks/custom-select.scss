@@ -121,26 +121,23 @@
     &[aria-selected="true"] {
       color: $color-default-white;
       background-color: $color-cerulean-blue;
+    }
 
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
+    @include hover {
+      &:not([aria-selected="true"]) {
+        color: $color-cerulean-blue;
+        background-color: $color-default-white;
       }
     }
 
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
-      }
+    @include active {
+      color: $color-default-white;
+      background-color: $color-cerulean-blue;
     }
 
-    &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
+    @include focus {
+      color: $color-default-white;
+      background-color: $color-cerulean-blue;
     }
   }
 

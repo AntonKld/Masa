@@ -19,6 +19,10 @@
   background-color: $color-cerulean-blue;
   animation-name: animation;
   animation-duration: 2s;
+
+  @include vp-767 {
+    min-width: 291px;
+  }
 }
 
 .nav__list {
@@ -27,7 +31,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-  row-gap: 17px;
+  row-gap: 16px;
 }
 
 .nav__link {
@@ -66,7 +70,8 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  row-gap: 16px;
+  row-gap: 4px;
+  padding-left: 15px;
   visibility: hidden;
 }
 
@@ -74,7 +79,7 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  row-gap: 16px;
+  row-gap: 4px;
   visibility: visible;
 }
 
@@ -139,7 +144,7 @@
 }
 
 .nav__item.is-active .nav__link--accordion {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   opacity: 1;
 }
 

@@ -9,7 +9,7 @@
   @include vp-1199 {
     padding-top: 99px;
     padding-bottom: 50px;
-    gap: 30px 0;
+    gap: 31px 0;
   }
 
   @include vp-767 {
@@ -74,6 +74,7 @@
   margin: 0;
   padding: 12px 26px;
   color: rgba(49, 109, 194, 0.6);
+  background-color: transparent;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -135,14 +136,15 @@
   padding-top: 191px;
 
   @include vp-1199 {
-    max-width: 100%;
-    height: auto;
-    min-height: 350px;
+    max-width: unset;
+    min-height: unset;
+    height: 45.57vw;
   }
 
   @include vp-767 {
-    min-height: 240px;
     padding-top: 100px;
+    max-height: unset;
+    height: 75vw;
   }
 }
 
@@ -151,8 +153,10 @@
   padding-top: 250px;
 
   @include vp-1199 {
-    max-width: 100%;
     padding-top: 127px;
+    max-width: unset;
+    min-height: unset;
+    height: 45.57vw;
   }
 
   @include vp-767 {
@@ -186,6 +190,7 @@
 }
 
 .news__swiper-button {
+  background-color: transparent;
   position: unset;
   left: unset;
   right: unset;
@@ -394,7 +399,7 @@
 
   @include vp-767 {
     padding: 4px 4px 1px 0;
-    width: 68.8%;
+    max-width: 68.8%;
     min-height: 51px;
   }
 }
@@ -489,6 +494,7 @@
   @include vp-767 {
     width: 91%;
     min-height: 64px;
+    max-width: 100%;
   }
 }
 

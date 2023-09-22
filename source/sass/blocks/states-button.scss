@@ -2,9 +2,12 @@
   border: 1px solid $color-cerulean-blue;
   border-radius: 30px;
   color: $color-cerulean-blue;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 46px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr 34px;
+  }
 
   &:hover {
     background-color: $color-cerulean-blue;

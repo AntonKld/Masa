@@ -72,6 +72,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  row-gap: 15px;
 
   @include vp-1199 {
     max-width: 100%;
@@ -178,12 +179,7 @@
   background-color: $color-charcoal;
   height: 500px;
   width: 100%;
-  margin-top: 40px;
   border-radius: 16px;
-
-  @include vp-1199 {
-    margin-top: 30px;
-  }
 
   @include vp-767 {
     height: 240px;
@@ -202,5 +198,15 @@
   @include vp-767 {
     width: 24px;
     height: 24px;
+  }
+}
+
+.contacts__map-wrapper {
+  margin-top: 40px;
+  overflow: hidden;
+  border-radius: 16px;
+
+  @include vp-1199 {
+    margin-top: 30px;
   }
 }

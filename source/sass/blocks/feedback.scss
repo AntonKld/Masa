@@ -116,7 +116,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 20px;
+    margin: 0;
   }
 }
 
@@ -206,13 +206,15 @@
   display: flex;
   flex-direction: column-reverse;
   margin-bottom: 18px;
+  width: 100%;
+  padding: 0;
 
   @include vp-1199 {
     margin-bottom: 17px;
   }
 
   @include vp-767 {
-    margin-bottom: 21px;
+    margin-bottom: 0;
   }
 }
 
@@ -308,7 +310,7 @@
   padding: 0 0 12px;
 
   @include vp-767 {
-    padding: 0 0 18px;
+    padding: 0;
   }
 }
 
@@ -331,8 +333,7 @@
 }
 
 .feedback__select-item:hover:not(.focus-visible) {
-  background-color: $color-cerulean-blue;
-  color: $color-default-white;
+  color: $color-cerulean-blue;
 }
 
 .feedback__select p {
@@ -428,7 +429,7 @@
 
   @include vp-767 {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -442,6 +443,12 @@
 
 .feedback__checkbox label {
   padding-left: 30px;
+
+  @include vp-767 {
+    display: flex;
+    align-items: center;
+    min-height: 28px;
+  }
 }
 
 .feedback__toggle-icon {
@@ -451,14 +458,15 @@
   height: 20px;
   top: 6px;
 
+
   @include vp-767 {
-    top: 7px;
+    top: 4px;
   }
 }
 
 .feedback__checkbox .feedback__toggle-icon {
   @include vp-767 {
-    top: 7px;
+    top: 4px;
   }
 
   &:hover {
@@ -535,10 +543,14 @@
   width: 100%;
   margin: 0 auto;
   justify-content: inherit;
-  padding: 3px 3px;
+  padding: 3px 3px 3px 29px;
+  gap: 29px;
+  display: flex;
+  align-items: center;
 
   @include vp-767 {
     width: 100%;
+    margin-top: 10px;
   }
 }
 
@@ -557,10 +569,19 @@
   letter-spacing: 0.28px;
   text-transform: uppercase;
   margin-left: auto;
+  width: 100%;
 
   @include vp-767 {
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
+  }
+}
+
+.feedback__form-wrapper {
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
   }
 }

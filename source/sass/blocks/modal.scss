@@ -40,7 +40,8 @@
     padding: 90px 40px;
 
     @include vp-1199 {
-      align-items: center;
+      padding: 14px 40px;
+      padding-top: 205px;
     }
 
     @include vp-767 {
