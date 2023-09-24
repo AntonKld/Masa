@@ -7271,6 +7271,8 @@ button,
   margin-top: 40px;
   overflow: hidden;
   border-radius: 16px;
+  -webkit-clip-path: content-box;
+          clip-path: content-box;
 }
 @media (max-width: 1199px) {
   .contacts__map-wrapper {
