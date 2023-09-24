@@ -17,6 +17,7 @@
 }
 .leaflet-container {
   overflow: hidden;
+  border-radius: 16px;
 }
 .leaflet-tile,
 .leaflet-marker-icon,
@@ -79,6 +80,7 @@
 .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
   -ms-touch-action: none;
   touch-action: none;
+  border-radius: 16px;
 }
 .leaflet-container {
   -webkit-tap-highlight-color: transparent;
