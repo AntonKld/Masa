@@ -212,6 +212,19 @@
 
 .faq__item.is-active .faq__button:active {
   background-color: $color-endeavour;
+
+  &.faq__button-icon{
+    background-color: $color-endeavour;
+  }
+}
+
+.faq__item.is-active .faq__button:hover .faq__button-icon {
+    background-color: $color-cerulean-blue;
+    border: 1px solid $color-default-white;
+
+  &::before {
+    background-color: $color-default-white;
+  }
 }
 
 .faq__item.is-active:has(.faq__button:active) {
@@ -220,19 +233,10 @@
 
 .faq__item.is-active .faq__button:active .faq__button-icon {
   background-color: $color-default-white;
-  border: 1px solid $color-default-white;
+  border: 1px solid $color-endeavour;
 
   &::before {
-    background-color: $color-endeavour;
-  }
-}
-
-.faq__item.is-active .faq__button:hover .faq__button-icon {
-  background-color: $color-cerulean-blue;
-  border: 1px solid $color-default-white;
-
-  &::before {
-    background-color: $color-default-white;
+    background-color: $color-cerulean-blue;
   }
 }
 
@@ -467,5 +471,14 @@
 
   @include vp-767 {
     margin-top: 0;
+  }
+}
+
+.faq__item.is-active .faq__button:focus .faq__button-icon {
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-default-white;
+
+  &::before {
+    background-color: $color-default-white;
   }
 }

@@ -1,27 +1,15 @@
 import Swiper from '../vendor/swiper';
 
 export const heroSwiper = () => {
-  const swiper = new Swiper('.hero__slider', {
-    watchSlidesProgress: true,
-    slideVisibleClass: 'hero__slide--visible',
-    loading: 'lazy',
-
+  const swiper = new Swiper('.hero__swiper', {
+    slidesPerView: 1,
+    keyboard: true,
+    loop: true,
+    /*
     autoplay: {
       delay: 3000,
     },
-
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
-    loop: true,
-    slideClass: 'hero__slide',
-    pagination: {
-      el: '.hero__pagination',
-      bulletClass: 'hero__bullet',
-      bulletActiveClass: 'hero__bullet--active',
-      clickable: true,
-    },
+    */
     breakpoints: {
       320: {
         allowTouchMove: true,
@@ -32,6 +20,18 @@ export const heroSwiper = () => {
       1200: {
         allowTouchMove: false,
       },
+    },
+    focusableElements: 'a, button',
+
+    pagination: {
+      el: '.hero__swiper-pagination',
+      type: 'bullets',
+      bulletElement: 'div',
+      bulletActiveClass: 'hero__swiper-bullet--active',
+      bulletClass: 'hero__swiper-bullet',
+      clickableClass: 'hero__swiper-bullet--clickable',
+      currentClass: 'hero__swiper-bullet--current',
+      clickable: true,
     },
   });
   swiper.init();
