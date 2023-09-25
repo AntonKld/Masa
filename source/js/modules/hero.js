@@ -5,11 +5,11 @@ export const heroSwiper = () => {
     slidesPerView: 1,
     keyboard: true,
     loop: true,
-    /*
+
     autoplay: {
       delay: 3000,
     },
-    */
+
     breakpoints: {
       320: {
         allowTouchMove: true,
