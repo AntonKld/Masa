@@ -213,14 +213,14 @@
 .faq__item.is-active .faq__button:active {
   background-color: $color-endeavour;
 
-  &.faq__button-icon{
+  &.faq__button-icon {
     background-color: $color-endeavour;
   }
 }
 
 .faq__item.is-active .faq__button:hover .faq__button-icon {
-    background-color: $color-cerulean-blue;
-    border: 1px solid $color-default-white;
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-default-white;
 
   &::before {
     background-color: $color-default-white;
