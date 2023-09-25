@@ -1,344 +1,392 @@
-.hero__swiper {
-  width: 100%;
-  min-height: 55vw;
-
-  @include vp-1199 {
-    min-height: 133vw;
-  }
+.hero {
+  background-color: $color-cerulean-blue;
 }
 
-.hero__swiper-wrapper {
-  width: 100%;
-  min-height: 55vw;
-
-  @include vp-1199 {
-    min-height: 133vw;
-  }
-
-  @include vp-767 {
-    min-height: 177.5vw;
-  }
+.hero__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.hero__swiper-slide {
+.hero__item {
+  display: flex;
+  height: auto;
+}
+
+.hero__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: auto;
+  align-items: flex-start;
+  padding-top: 401px;
+  padding-bottom: 60px;
+  visibility: hidden;
+  transition: visibility $trans-default;
 
   @include vp-1199 {
-    min-height: 133.3vw;
+    padding-top: 696px;
+    padding-bottom: 60px;
+
+    .hero__header {
+      max-width: 97.1%;
+      margin: 0;
+      padding: 31px 39px 23px;
+      font-size: 36px;
+      line-height: 44px;
+    }
   }
 
   @include vp-767 {
-    min-height: 177.5vw;
+    padding-top: 233px;
+    padding-bottom: 19px;
+
+    .hero__header {
+      max-width: 100%;
+      margin: 0;
+      padding: 20px 14px 16px;
+      font-size: 22px;
+      line-height: 26px;
+      border-radius: 0 16px 16px 0;
+      margin-top: -1px;
+    }
   }
 }
 
-.hero__overlay-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.hero__header {
+  max-width: 78.1%;
+  margin: 0;
+  padding: 40px 50px 29px;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 62px;
+  color: $color-cerulean-blue;
+  background-color: $color-default-white;
+  border-radius: 0 30px 30px 0;
 }
 
-.hero__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $color-photo-overlay;
-  z-index: 1;
+.hero__item--active .hero__content {
+  visibility: visible;
 }
 
-.hero__swiper-slide img {
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  object-fit: cover;
-}
-
-.hero__slider-content {
-  display: none;
-}
-
-.hero__swiper-slide.swiper-slide-active .hero__slider-content {
-  display: block;
+.hero__content .hero__pagination {
   position: relative;
-  padding: 419px 100px 60px;
-  z-index: 2;
-
-  @include vp-1199 {
-    padding: 676px 45px 60px;
-  }
-
-  @include vp-767 {
-    padding: 200px 15px 20px;
-  }
-
-
-  &--third {
-    padding-top: 409px;
-
-    @include vp-1199 {
-      padding-top: 663px;
-    }
-
-    @include vp-767 {
-      padding-top: 232px;
-    }
-  }
-}
-
-.hero__swiper-pagination {
-  position: absolute;
-  top: 1px;
+  bottom: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  max-width: 94px;
-  height: 38px;
+  width: auto;
+  padding: 14px 19px;
   background-color: $color-default-white;
   border-radius: 20px 20px 0 0;
+  gap: 0 2px;
 
-  @include vp-767 {
-    max-width: 80px;
-    height: 28px;
-    border-radius: 12px 12px 0 0;
+  &::before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml,\<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M20 20C8.95431 20 0 11.0457 0 0V20H20Z" fill="%23ffffff"/>\</svg>');
   }
 
-  @include angle;
+  @include vp-767 {
+    padding: 10px 16px;
+    border-radius: 12px 12px 0 0;
 
-  &::after {
-    right: -19px;
+    &::before {
+      right: -7px;
+      width: 8px;
+      height: 8px;
+    }
   }
 }
 
-.hero__swiper-bullet {
+.hero__pagination .hero__pagination-button {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  background-color: $color-transparent;
   border: 1px solid $color-cerulean-blue;
-  background-color: transparent;
-  cursor: pointer;
   outline: none;
+  opacity: 1;
 
   @include vp-767 {
     width: 8px;
     height: 8px;
   }
-
-  &:hover,
-  &:focus {
-    border-color: $color-charcoal;
-  }
-
-  &--active {
-    background-color: $color-cerulean-blue;
-  }
 }
 
-.hero__slider-content h2 {
-  @include title-h1;
-
-  margin: 0;
-  padding: 40px 50px 31px;
-  width: 968px;
-  color: $color-cerulean-blue;
-  background-color: $color-default-white;
-  border-radius: 0 30px 30px 0;
-
-  @include vp-1199 {
-    padding: 31px 40px 24px;
-    width: 659px;
-  }
-
-  @include vp-767 {
-    padding: 20px 14px 16px;
-    width: 100%;
-    border-radius: 0 16px 16px 0;
-  }
+.hero__slider .hero__pagination-bullet-active {
+  background-color: $color-cerulean-blue;
 }
 
-.hero__slider-content--third h2 {
-  padding: 40px 50px 29px;
-  margin-bottom: -6px;
-
-  @include vp-1199 {
-    padding: 30px 40px 26px;
-  }
-
-  @include vp-767 {
-    padding: 19px 14px 18px;
-  }
-}
-
-.hero__slider-info {
-  @include angle;
-
-  margin-top: -1px;
-  padding: 0 50px 35px;
+.hero__bottom {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 772px;
+  margin: -1px 468px 0 0;
+  padding: 3px 50px 33px;
   background-color: $color-default-white;
   border-radius: 0 0 30px 30px;
+  gap: 0 30px;
 
-  &::after {
+  &::before {
+    content: "";
+    position: absolute;
     top: 0;
     right: -25px;
     width: 26px;
     height: 26px;
-    transform: rotate(90deg);
+    background-image: url('data:image/svg+xml,\<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M26 0C11.6406 0 0 11.6406 0 26V0H26Z" fill="%23ffffff"/>\</svg>');
+  }
 
-    @include vp-1199 {
+  @include vp-1199 {
+    margin: -4px 87px 0 0;
+    padding: 0 40px 32px;
+
+    &::before {
       top: 4px;
     }
 
-    @include vp-767 {
-      width: 10px;
-      height: 10px;
-      right: -10px;
+    .hero__text {
+      width: 100%;
+      line-height: 20px;
     }
-  }
-
-  &--third {
-    padding-bottom: 28px;
-
-    &::after {
-      top: 5px;
-    }
-  }
-
-  @include vp-1199 {
-    margin-top: -4px;
-    padding: 0 40px 32px;
-    width: 591px;
   }
 
   @include vp-767 {
-    margin-top: -5px;
-    padding: 0;
-    display: flex;
-    width: 90%;
     flex-direction: column;
-    background-color: transparent;
+    margin: -5px 0 0;
+    padding: 0;
+    background-color: $color-transparent;
+
+    &::before {
+      content: none;
+    }
+
+    .hero__text {
+      position: relative;
+      max-width: 90%;
+      padding: 0 14px 10px;
+      font-size: 14px;
+      background-color: $color-default-white;
+      border-radius: 0 0 14px 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: -10px;
+        width: 10px;
+        height: 10px;
+        background-image: url('data:image/svg+xml,\<svg width="10" height="10" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M26 0C11.6406 0 0 11.6406 0 26V0H26Z" fill="%23ffffff"/>\</svg>');
+      }
+    }
   }
 }
 
-.hero__slider-info p {
-  @include text-regular;
-
-  margin: 0;
+.hero__text {
   width: 446px;
-
-  @include vp-1199 {
-    width: 285px;
-  }
-
-  @include vp-767 {
-    padding: 0 14px 11px;
-    width: 100%;
-    background-color: $color-default-white;
-    border-radius: 0 0 16px 0;
-  }
+  margin: 0;
 }
 
-.hero__slider-btn-wrapper {
+.hero__button-container {
+  align-self: center;
+  margin: -1px 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -9px;
+    width: 10px;
+    height: 10px;
+    background-image: url('data:image/svg+xml,\<svg width="10" height="10" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">\<path d="M26 0C11.6406 0 0 11.6406 0 26V0H26Z" fill="%23ffffff"/>\</svg>');
+  }
+
   @include vp-1199 {
     align-self: flex-start;
+    margin: 4px 0 0;
   }
 
   @include vp-767 {
-    @include angle;
-
-    margin-top: -1px;
-    padding: 10px 15px;
+    position: relative;
+    max-width: 63%;
+    margin: 0;
+    padding: 11px 15px;
     background-color: $color-default-white;
     border-radius: 0 0 14px 14px;
-    width: 70%;
-
-
-    &::after {
-      top: 0;
-      right: -10px;
-      width: 10px;
-      height: 10px;
-      transform: rotate(90deg);
-    }
+    margin-top: -1px;
   }
 }
 
-.hero__slider-btn {
-  padding-left: 30px;
-  width: 196px;
+.hero__background {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  width: 100%;
+  height: 100%;
 
-  @include vp-1199 {
-    margin-top: 4px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-blue;
+    inset: 0;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero__button-wrapper {
+  width: 196px;
+  position: relative;
+  display: inline-block;
+  padding: 19px 79px 19px 29px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-cerulean-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
+  background-color: $color-transparent;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    color $trans-default,
+    background-color $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    width: 46px;
+    height: 46px;
+    background-color: $color-cerulean-blue;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background-color $trans-default;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 21px;
+    bottom: 0;
+    left: auto;
+    margin: auto 0;
+    color: $color-default-white;
+    transition:
+      color $trans-default,
+      transform $trans-default;
+    stroke-width: 1px;
   }
 
   @include vp-767 {
-    margin: 0;
-    padding-left: 19px;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 34px;
-    column-gap: 19px;
+    padding: 5vw 18vw 4vw 6vw;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+
+    &::before {
+      right: 3px;
+      width: 34px;
+      height: 34px;
+    }
+
+    svg {
+      right: 15px;
+    }
   }
 
-  &:hover,
-  &:focus-visible {
-    color: $color-default-white;
+  &:hover {
     background-color: $color-cerulean-blue;
+    color: $color-default-white;
 
-    .hero__icon-wrapper {
+    &::before {
       background-color: $color-default-white;
     }
 
     svg {
-      stroke: $color-cerulean-blue;
+      color: $color-cerulean-blue;
       transform: rotate(45deg);
-      transition: transform $trans-default;
+    }
+  }
+
+  &:focus {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+      transform: rotate(45deg);
     }
   }
 
   &:active {
-    .hero__slider-btn-text,
+    background-color: $color-cerulean-blue;
+    color: rgba($color-default-white, 0.7);
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
     svg {
-      opacity: 0.7;
+      transform: rotate(45deg);
+      color: rgba($color-cerulean-blue, 0.7);
     }
   }
 
-  &.disabled {
-    color: $color-mischka;
-    border: 1px solid $color-mischka;
+  @include disabled {
     pointer-events: none;
+    border-color: $color-mischka;
+    color: $color-mischka;
 
-    .hero__icon-wrapper {
+    &::before {
       background-color: $color-mischka;
     }
   }
 }
 
-.hero__slider-btn-text {
-  width: 56%;
+.hero__content-wrapper {
+  padding-top: 408px;
+  padding-bottom: 59px;
+
+  @include vp-1199 {
+    padding-top: 652px;
+    padding-bottom: 60px;
+  }
 
   @include vp-767 {
-    width: 100%;
+    padding-top: 233px;
+    padding-bottom: 19px;
   }
 }
 
-.hero__icon-wrapper {
-  @include vp-767 {
-    width: 34px;
-    height: 34px;
-  }
-}
+.hero__content-wrapper .hero__bottom {
+  margin: -3px 468px 0 0;
+  padding: 0 50px 33px;
 
-.hero__slider-btn svg {
-  stroke: $color-default-white;
+  @include vp-1199 {
+    margin: -4px 87px 0 0;
+    padding: 0 40px 32px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    margin: -5px 0 0;
+    padding: 0;
+    background-color: transparent;
+  }
 }
